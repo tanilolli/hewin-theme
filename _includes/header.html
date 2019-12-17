@@ -1,0 +1,15 @@
+<header>
+	<div class="wrapper">
+		<nav>
+			<a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+		</br>
+
+   			{% for page in site.html_pages %}
+   			{% if page.title %}
+   			<a class="nav-item" href="{{page.url}}">{{ page.title }}</a>
+   			{% endif %}
+  			{% endfor %}
+
+		</nav>	
+	</div>
+</header>
