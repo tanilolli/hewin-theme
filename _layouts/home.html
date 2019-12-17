@@ -13,15 +13,22 @@ layout: default
       {%- for post in site.posts -%}
       <li>
         {%- assign date_format = "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <div class="post-meta">
         <h3 class="post-title">
           <a  href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt | truncatewords: 80 }}
-        {%- endif -%}
+        <span class="post-date">{{ post.date | date: date_format }}</span>
+        </div>
+        
+        <article>
+        {% if post.image %}
+          <a href="{{ post.url | prepend: site.baseurl }}"><img class="post-thumb" src="{{ post.image }}"/></a>
+        {% endif %}
+        {{ post.excerpt | truncatewords: 100 }}
+        </article>
+        
       </li>
       {%- endfor -%}
     </ul>
