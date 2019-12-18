@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans:400,900&display=swap');
 
 $off-white: #eee;
+$light-grey: #ddd;
 $dark-grey: #333;
 $grey: #555;
 $light-blue: #409FFF;
@@ -121,13 +122,26 @@ article{
     margin-top: 1em;
   }
 }
+
 table{
   border-collapse: collapse;
   text-align: left;
+  width: 100%;
 }
 
-th, td, tr {
+th{
+  background-color: $dark-grey;
+  color: $off-white;
+  padding: 10px;
+}
+
+td, tr {
   border-bottom: 1px solid $border;
+  padding: 10px;
+}
+
+tr:nth-child(even){
+  background-color: $light-grey;
 }
 
 footer {
