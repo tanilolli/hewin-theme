@@ -2,7 +2,7 @@
 # Hewin FM Main SCSS
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,900&display=swap');
 
 $off-white: #eee;
 $light-grey: #ddd;
@@ -147,7 +147,6 @@ tr:nth-child(even){
 }
 
 footer {
-  border-top: 1px solid $border;
   padding: 25px;
 }
 
